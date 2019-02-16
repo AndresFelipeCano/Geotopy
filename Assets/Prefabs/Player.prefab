@@ -98,9 +98,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kindOfGeo: 0
   geometrics:
-  - {fileID: 1842456406862984, guid: 4d515319456d5bf46be9369d7896ad1c, type: 2}
+  - {fileID: 1501932147209460, guid: 4d515319456d5bf46be9369d7896ad1c, type: 2}
   - {fileID: 1764293281687314, guid: 11a7f418221169a4b930003009984f63, type: 2}
   - {fileID: 1272546283219166, guid: 806c1d201c37d474f962a6fd3bebd2b3, type: 2}
+  creationPoint: {fileID: 0}
 --- !u!136 &136399919238616370
 CapsuleCollider:
   m_ObjectHideFlags: 1
