@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
@@ -108,9 +108,9 @@ public class Communications : MonoBehaviour
 		instance.SendStringImmediatly(message, port);
 	}
 
-	public static void Send(string key, float value)
+	public static void Send(string key)
 	{
-		string message = string.Format("{0} {1}", key, value);
+		string message = string.Format(key);
 		instance.SendString(message);
 	}
 

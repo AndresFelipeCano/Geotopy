@@ -7,6 +7,7 @@ public class Pool : MonoBehaviour {
     public IncreaserGeometric[] proyectilSphere;
     public IncreaserGeometric[] proyectilPiramid;
     public IncreaserGeometric[] proyectilCube;
+    public Transform poolSite;
 
     // Use this for initialization
 
@@ -64,6 +65,9 @@ public class Pool : MonoBehaviour {
     {
        figure.GetComponent<Rigidbody>().velocity = Vector3.zero;
         figure.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-
+        figure.GetComponent<Transform>().position = poolSite.position;
+        figure.sinDisparar = true;
+        figure.imActive = false;
+        figure.GetComponent<Collider>().enabled = false;
     }
 }

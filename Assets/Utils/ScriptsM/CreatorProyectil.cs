@@ -143,14 +143,16 @@ public class CreatorProyectil : MonoBehaviour {
 
      if (canShoot)
         {
-            GameObject proyectil = pool.OutPool(tag).GetComponent<GameObject>();
+            IncreaserGeometric figura = pool.OutPool(tag);
+            figura.GetComponent<GameObject>().transform.position = respawn.position; 
 
 
-            proyectil.transform.position = respawn.position;
-            IncreaserGeometric figura = Instantiate(proyectil, respawn.position, respawn.rotation, respawn).GetComponent<IncreaserGeometric>();
+         
+           // IncreaserGeometric figura = Instantiate(proyectil, respawn.position, respawn.rotation, respawn).GetComponent<IncreaserGeometric>();
             figura.Instrumento = instrumentos;
             figura.Mano = hand;
             figura.Parent = gameObject.GetComponent<CreatorProyectil>();
+            Communications.Send(figura.name);
         }
      
         

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class IncreaserGeometric : MonoBehaviour {
 
+    public Vector3 distance;
+    public string figureName;
+    public Pool pool;
     public bool imActive = false;
     
     public float baseSize, ejectForce, multiplerSize, resizeSpeed = 1;
@@ -115,7 +118,7 @@ public class IncreaserGeometric : MonoBehaviour {
         _propBlockInSide.SetFloat("_insVertexSize", vertexSize);
         _propBlockOutSide.SetFloat("_vertexSize", vertexSize);
 
-
+       // distance = new Vector3.Distance();
 
 
 
@@ -215,10 +218,8 @@ public class IncreaserGeometric : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Sword")
-        {
-            Destroy(gameObject);
-        }
+        pool.InPool(this);
+        Communications.Send(name);
     }
 
 }
