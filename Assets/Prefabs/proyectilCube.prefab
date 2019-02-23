@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSize: 0.3
-  ejectForce: 5.26
+  ejectForce: 3
   multiplerSize: 2
   resizeSpeed: 1
   gradients:
@@ -369,7 +369,6 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   particleGlow: {fileID: 198600383544825526}
   instrumento: 0
-  sinDisparar: 1
   vertexSize: 0
   insideGeometric: {fileID: 1143185443990680}
 --- !u!198 &198600383544825526
